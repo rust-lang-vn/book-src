@@ -1,41 +1,33 @@
-# Foreword
+# Lời tựa
 
-It wasn’t always so clear, but the Rust programming language is fundamentally
-about *empowerment*: no matter what kind of code you are writing now, Rust
-empowers you to reach farther, to program with confidence in a wider variety of
-domains than you did before.
+Nó không phải lúc nào cũng rõ ràng như vậy, nhưng ngôn ngữ lập trình Rust về cơ bản là về *trao quyền*: cho dù bây giờ
+bạn đang viết loại mã nào, Rust cho phép bạn vươn xa hơn, tự tin lập trình trong nhiều lĩnh vực hơn những gì bạn đã làm
+trước đây.
 
-Take, for example, “systems-level” work that deals with low-level details of
-memory management, data representation, and concurrency. Traditionally, this
-realm of programming is seen as arcane, accessible only to a select few who
-have devoted the necessary years learning to avoid its infamous pitfalls. And
-even those who practice it do so with caution, lest their code be open to
-exploits, crashes, or corruption.
+Ví dụ, công việc “systems-level” xử lý các chi tiết low-level về quản lý bộ nhớ (memory management), biểu diễn dữ liệu
+(data representation) và đồng thời (concurrency). Theo truyền thống, lĩnh vực lập trình này được coi là phức tạp, chỉ
+một số ít người được tuyển chọn đã phải dành những năm học hỏi để tránh những cạm bẫy khét tiếng của nó. Và ngay cả
+những người thực hành nó cũng làm như vậy một cách thận trọng, kẻo mã của họ có thể bị khai thác (exploits), gián đoạn
+(crashes), hoặc xáo trộn (corruption).
 
-Rust breaks down these barriers by eliminating the old pitfalls and providing a
-friendly, polished set of tools to help you along the way. Programmers who need
-to “dip down” into lower-level control can do so with Rust, without taking on
-the customary risk of crashes or security holes, and without having to learn
-the fine points of a fickle toolchain. Better yet, the language is designed to
-guide you naturally towards reliable code that is efficient in terms of speed
-and memory usage.
+Rust phá vỡ những rào cản này bằng cách loại bỏ những cạm bẫy cũ và cung cấp một bộ công cụ thân thiện, được trao chuốt
+để giúp bạn trong suốt chặng đường. Các lập trình viên khi cần phải “nhúng tay vào” kiểm soát lower-level có thể làm như
+vậy với Rust, mà không phải chịu rủi ro thông thường về sự cố hoặc lỗ hổng bảo mật và không cần phải học những điểm tốt
+của một chuỗi công cụ hay thay đổi. Tốt hơn nữa, ngôn ngữ được thiết kế để hướng dẫn bạn một cách tự nhiên đến mã đáng
+tin cậy, hiệu quả về tốc độ và sử dụng bộ nhớ.
 
-Programmers who are already working with low-level code can use Rust to raise
-their ambitions. For example, introducing parallelism in Rust is a relatively
-low-risk operation: the compiler will catch the classical mistakes for you. And
-you can tackle more aggressive optimizations in your code with the confidence
-that you won’t accidentally introduce crashes or vulnerabilities.
+Các lập trình viên đang làm việc với mã low-level có thể sử dụng Rust để nâng cao tham vọng của họ. Ví dụ, giới thiệu về
+song song (parallelism) trong Rust là một hoạt động có rủi ro tương đối thấp: trình biên dịch sẽ bắt các lỗi cổ điển cho
+bạn. Và bạn có thể xử lý các tối ưu hóa tích cực hơn trong mã của mình với sự tự tin rằng bạn sẽ không vô tình tạo ra
+các sự cố hoặc lỗ hổng bảo mật.
 
-But Rust isn’t limited to low-level systems programming. It’s expressive and
-ergonomic enough to make CLI apps, web servers, and many other kinds of code
-quite pleasant to write — you’ll find simple examples of both later in the
-book. Working with Rust allows you to build skills that transfer from one
-domain to another; you can learn Rust by writing a web app, then apply those
-same skills to target your Raspberry Pi.
+Nhưng Rust không giới hạn trong việc lập trình hệ thống low-level. Nó đủ khả năng và tiện dụng để làm cho các ứng dụng
+CLI, máy chủ web và nhiều loại mã khác khá dễ viết — bạn sẽ tìm thấy các ví dụ đơn giản về cả hai điều này ở phần sau
+của cuốn sách. Làm việc với Rust cho phép bạn xây dựng các kỹ năng chuyển từ miền này sang miền khác; bạn có thể học
+Rust bằng cách viết một ứng dụng web, sau đó áp dụng những kỹ năng tương tự để nhắm mục tiêu Raspberry Pi của bạn.
 
-This book fully embraces the potential of Rust to empower its users. It’s a
-friendly and approachable text intended to help you level up not just your
-knowledge of Rust, but also your reach and confidence as a programmer in
-general. So dive in, get ready to learn—and welcome to the Rust community!
+Cuốn sách này hoàn toàn khai thác tiềm năng của Rust để trao quyền cho người dùng. Đó là một văn bản thân thiện và dễ
+tiếp cận nhằm giúp bạn nâng cao không chỉ kiến thức về Rust mà còn cả khả năng tiếp cận và sự tự tin của bạn với tư cách
+là một lập trình viên nói chung. Vì vậy, hãy tham gia, sẵn sàng học hỏi — và chào mừng bạn đến với cộng đồng Rust!
 
-— Nicholas Matsakis and Aaron Turon
+— Nicholas Matsakis và Aaron Turon
