@@ -1,48 +1,43 @@
-# The Rust Programming Language
+# Ngôn ngữ Lập trình Rust
 
-*by Steve Klabnik and Carol Nichols, with contributions from the Rust Community*
+*tạo bởi Steve Klabnik và Carol Nichols, với sự đóng góp từ Cộng đồng Rust*
 
-This version of the text assumes you’re using Rust 1.54 or later with
-`edition="2018"` in *Cargo.toml* of all projects to use Rust 2018 Edition
-idioms. See the [“Installation” section of Chapter 1][install]<!-- ignore -->
-to install or update Rust, and see the new [Appendix E][editions]<!-- ignore
---> for information on editions.
+Phiên bản này của văn bản giả định rằng bạn đang sử dụng Rust 1.54 hoặc cao hơn với `edition="2018"` trong *Cargo.toml*
+của tất cả các dự án để sử dụng những thuật ngữ trong Rust 2018 Edition.
+Xem [“Installation” section of Chapter 1][install]<!-- ignore --> để cài đặt và cập nhật Rust, và xem
+thêm [Appendix E][editions]<!-- ignore --> để biết thông tin về các phiên bản.
 
-The 2018 Edition of the Rust language includes a number of improvements that
-make Rust more ergonomic and easier to learn. This iteration of the book
-contains a number of changes to reflect those improvements:
+2018 Edition của ngôn ngữ Rust bao gồm một số cải tiến giúm cho Rust tiện dụng và dễ học hơn. Phần lặp lại này của cuốn
+sách có một số thay đổi để phản ánh những cải tiến đó:
 
-- Chapter 7, “Managing Growing Projects with Packages, Crates, and Modules,”
-  has been mostly rewritten. The module system and the way paths work in the
-  2018 Edition were made more consistent.
-- Chapter 10 has new sections titled “Traits as Parameters” and “Returning
-  Types that Implement Traits” that explain the new `impl Trait` syntax.
-- Chapter 11 has a new section titled “Using `Result<T, E>` in Tests” that
-  shows how to write tests that use the `?` operator.
-- The “Advanced Lifetimes” section in Chapter 19 was removed because compiler
-  improvements have made the constructs in that section even rarer.
-- The previous Appendix D, “Macros,” has been expanded to include procedural
-  macros and was moved to the “Macros” section in Chapter 19.
-- Appendix A, “Keywords,” also explains the new raw identifiers feature that
-  enables code written in the 2015 Edition and the 2018 Edition to interoperate.
-- Appendix D is now titled “Useful Development Tools” and covers recently
-  released tools that help you write Rust code.
-- We fixed a number of small errors and imprecise wording throughout the book.
-  Thank you to the readers who reported them!
+- Chương 7, “Managing Growing Projects with Packages, Crates, and Modules,” đã được viết lại gần hết. Hệ thống module và
+  cách những đường dẫn hoạt động trong 2018 Edition đã được thực hiện nhất quán hơn.
+- Chương 10 có các phần mới với tiêu đề “Traits as Parameters” và “Returning Types that Implement Traits” dùng để giải
+  thích cú pháp `impl Trait` mới.
+- Chương 11 có một phần mới với tiêu đề “Using `Result<T, E>` in Tests” để biểu diễn cách viết test sử dụng toán tử `?`.
+- Phần “Advanced Lifetimes” trong Chương 19 được loại bỏ vì các cải tiến của compiler đã làm cho những cấu trúc trong
+  phần đó trở nên hiếm hơn.
+- Phụ lục D trước đó, “Macros,” đã được mở rộng để bao gồm các thủ tục marco và được chuyển đến phần “Macros” trong
+  Chương 19.
+- Phụ lục A, “Keywords,” cũng giải thích tính năng mới raw identifiers cho phép mã được viết trong 2015 Edition và 2018
+  Edition tương tác với nhau.
+- Phụ lục D bây giờ có tiêu đề “Useful Development Tools” và bao gồm các công cụ được phát hành gần đây giúp bạn viết mã
+  Rust.
+- Chúng tôi đã sửa một số lỗi nhỏ và cách diễn đạt không chính xác trong suốt cuốn sách. Cảm ơn các độc giả đã báo cáo
+  chúng!
 
-Note that any code in earlier iterations of *The Rust Programming Language*
-that compiled will continue to compile without `edition="2018"` in the
-project’s *Cargo.toml*, even as you update the Rust compiler version you’re
-using. That’s Rust’s backward compatibility guarantees at work!
+Lưu ý rằng bất kỳ mã nào trong các lần lặp trước đó của *Ngôn ngữ Lập trình Rust* đã được biên dịch sẽ tiếp tục được
+biên dịch mà không có `edition="2018"` trong *Cargo.toml* của dự án, ngay cả khi bạn cập nhật phiên bản trình biên dịch
+Rust mà bạn đang sử dụng. Đó là đảm bảo khả năng tương thích ngược của Rust!
 
-The HTML format is available online at
+Định dạng HTML có sẵn online tại
 [https://doc.rust-lang.org/stable/book/](https://doc.rust-lang.org/stable/book/)
-and offline with installations of Rust made with `rustup`; run `rustup docs
---book` to open.
+và bản offline kèm theo các bản cài đặt của Rust được thực hiện bằng `rustup`; chạy `rustup docs --book` để mở.
 
-This text is available in [paperback and ebook format from No Starch
-Press][nsprust].
+Văn bản này có sẵn trong [paperback and ebook format from No Starch Press][nsprust].
 
 [install]: ch01-01-installation.html
+
 [editions]: appendix-05-editions.html
+
 [nsprust]: https://nostarch.com/rust
