@@ -1,128 +1,115 @@
-## Installation
+## Cài đặt
 
-The first step is to install Rust. We’ll download Rust through `rustup`, a
-command line tool for managing Rust versions and associated tools. You’ll need
-an internet connection for the download.
+Bước đầu tiên là cài đặt Rust. Chúng ta sẽ tải xuống Rust thông qua `rustup`, một công cụ command line để quản lý các
+phiên bản Rust và các công cụ liên quan. Bạn sẽ cần kết nối Internet để tải xuống.
 
-> Note: If you prefer not to use `rustup` for some reason, please see the
-> [Other Rust Installation Methods page][install] for more options.
+> Ghi chú: Nếu bạn không muốn sử dụng `rustup` vì lý do nào đó, vui lòng xem
+> [Other Rust Installation Methods page][install] để có nhiều lựa chọn hơn.
 
 [install]: https://forge.rust-lang.org/infra/other-installation-methods.html
 
-The following steps install the latest stable version of the Rust compiler.
-Rust’s stability guarantees ensure that all the examples in the book that
-compile will continue to compile with newer Rust versions. The output might
-differ slightly between versions, because Rust often improves error messages
-and warnings. In other words, any newer, stable version of Rust you install
-using these steps should work as expected with the content of this book.
+Các bước sau cài đặt phiên bản ổn định mới nhất của trình biên dịch Rust. Tính ổn định của Rust đảm bảo rằng tất cả các
+ví dụ trong cuốn sách biên dịch sẽ tiếp tục được biên dịch với các phiên bản Rust mới hơn. Đầu ra có thể hơi khác nhau
+giữa các phiên bản, vì Rust thường cải thiện các thông báo và cảnh báo lỗi. Nói cách khác, bất kỳ phiên bản mới, ổn định
+của Rust mà bạn cài đặt bằng các bước sẽ hoạt động như mong đợi với nội dung của cuốn sách này.
 
-> ### Command Line Notation
+> ### Ký hiệu dòng lệnh
 >
-> In this chapter and throughout the book, we’ll show some commands used in the
-> terminal. Lines that you should enter in a terminal all start with `$`. You
-> don’t need to type in the `$` character; it indicates the start of each
-> command. Lines that don’t start with `$` typically show the output of the
-> previous command. Additionally, PowerShell-specific examples will use `>`
-> rather than `$`.
+> Trong chương này và xuyên suốt cuốn sách, chúng tôi sẽ trình bày một số lệnh được sử dụng
+> trong terminal. Các dòng mà bạn nên nhập vào terminal đều bắt đầu bằng `$`. Bạn
+> không cần thiết phải gõ ký hiệu `$`; nó chỉ ra sự bắt đầu của mỗi
+> lệnh. Các dòng không bắt đầu bằng `$` thường hiển thị đầu ra của
+> lệnh trước đó. Ngoài ra, các ví dụ cụ thể về PowerShell sẽ sử dụng `>`
+> thay thế cho `$`.
 
-### Installing `rustup` on Linux or macOS
+### Cài đặt `rustup` trên Linux hoặc macOS
 
-If you’re using Linux or macOS, open a terminal and enter the following command:
+Nếu bạn đang dùng Linux hoặc macOS, mở terminal và nhập lệnh sau:
 
 ```console
 $ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 ```
 
-The command downloads a script and starts the installation of the `rustup`
-tool, which installs the latest stable version of Rust. You might be prompted
-for your password. If the install is successful, the following line will appear:
+Lệnh tải xuống một tập lệnh và bắt đầu cài đặt công cụ `rustup`, để cài đặt phiên bản ổn định mới nhất của Rust. Bạn có
+thể được nhắc nhập mật khẩu của mình. Nếu cài đặt thành công, dòng sau sẽ xuất hiện:
 
 ```text
 Rust is installed now. Great!
 ```
 
-You will also need a linker, which is a program that Rust uses to join its
-compiled outputs into one file. It is likely you already have one. If you get
-linker errors, you should install a C compiler, which will typically include a
-linker. A C compiler is also useful because some common Rust packages depend on
-C code and will need a C compiler.
+Bạn cũng sẽ cần một trình liên kết (linker), đây là một chương trình mà Rust sử dụng để kết hợp các đầu ra đã biên dịch
+của nó thành một tệp. Có khả năng là bạn đã có sẵn. Nếu bạn gặp lỗi trình liên kết, bạn nên cài đặt trình biên dịch C,
+trình biên dịch này thường sẽ bao gồm trình liên kết. Trình biên dịch C cũng hữu ích vì một số gói Rust phổ biến phụ
+thuộc vào mã C và sẽ cần trình biên dịch C.
 
-On macOS, you can get a C compiler by running:
+Trên macOS, bạn có thể tải một trình biên dịch C bằng cách chạy:
 
 ```console
 $ xcode-select --install
 ```
 
-Linux users should generally install GCC or Clang, according to their
-distribution's documentation. For example, if you use Ubuntu, you can install
-the `build-essential` package.
+Người dùng Linux nói chung nên cài đặt GCC hoặc Clang, theo tài liệu của bản phân phối của chúng. Ví dụ: nếu bạn sử dụng
+Ubuntu, bạn có thể cài đặt gói `build-essential`.
 
-### Installing `rustup` on Windows
+### Cài đặt `rustup` trên Windows
 
-On Windows, go to [https://www.rust-lang.org/tools/install][install] and follow
-the instructions for installing Rust. At some point in the installation, you’ll
-receive a message explaining that you’ll also need the C++ build tools for
-Visual Studio 2013 or later. The easiest way to acquire the build tools is to
-install [Build Tools for Visual Studio 2019][visualstudio]. When asked which
-workloads to install make sure "C++ build tools" is selected and that the
-Windows 10 SDK and the English language pack components are included.
+Trên Windows, đi đến [https://www.rust-lang.org/tools/install][install] và làm theo hướng dẫn để cài đặt Rust. Tại một
+số thời điểm trong quá trình cài đặt, bạn sẽ nhận được thông báo giải thích rằng bạn cũng sẽ cần các công cụ xây dựng
+C++ cho Visual Studio 2013 trở lên. Khi được hỏi workloads nào cần cài đặt, hãy đảm bảo rằng "C++ build tools"
+được chọn và Windows 10 SDK cũng như bao gồm gói ngôn ngữ English.
 
 [install]: https://www.rust-lang.org/tools/install
+
 [visualstudio]: https://visualstudio.microsoft.com/visual-cpp-build-tools/
 
-The rest of this book uses commands that work in both *cmd.exe* and PowerShell.
-If there are specific differences, we’ll explain which to use.
+Phần còn lại của cuốn sách này sử dụng các lệnh hoạt động trong cả *cmd.exe* và PowerShell. Nếu có sự khác biệt cụ thể,
+chúng tôi sẽ giải thích cách sử dụng.
 
-### Updating and Uninstalling
+### Cập nhật và Gỡ cài đặt
 
-After you’ve installed Rust via `rustup`, updating to the latest version is
-easy. From your shell, run the following update script:
+Sau khi bạn cài đặt Rust thông qua `rustup`, cập nhật lên phiên bản mới nhất rất dễ dàng. Từ trình shell của bạn, chạy
+tập lệnh cập nhật sau:
 
 ```console
 $ rustup update
 ```
 
-To uninstall Rust and `rustup`, run the following uninstall script from your
-shell:
+Để gỡ cài đặt Rust và `rustup`, chạy tập lệnh gỡ cài đặt sau từ trình shell của bạn:
 
 ```console
 $ rustup self uninstall
 ```
 
-### Troubleshooting
+### Xử lý sự cố
 
-To check whether you have Rust installed correctly, open a shell and enter this
-line:
+Để kiểm tra xem bạn đã cài đặt Rust đúng cách hay chưa, hãy mở một trình shell và nhập dòng này:
 
 ```console
 $ rustc --version
 ```
 
-You should see the version number, commit hash, and commit date for the latest
-stable version that has been released in the following format:
+Bạn sẽ thấy số phiên bản, commit hash và ngày commit cho phiên bản ổn định mới nhất đã được phát hành ở định dạng sau:
 
 ```text
 rustc x.y.z (abcabcabc yyyy-mm-dd)
 ```
 
-If you see this information, you have installed Rust successfully! If you don’t
-see this information and you’re on Windows, check that Rust is in your `%PATH%`
-system variable. If that’s all correct and Rust still isn’t working, there are
-a number of places you can get help. The easiest is the #beginners channel on
-[the official Rust Discord][discord]. There, you can chat with other Rustaceans
-(a silly nickname we call ourselves) who can help you out. Other great
-resources include [the Users forum][users] and [Stack Overflow][stackoverflow].
+Nếu bạn thấy thông tin này, bạn đã cài đặt Rust thành công! Nếu bạn không thấy thông tin này và bạn đang sử dụng
+Windows, hãy kiểm tra xem Rust có trong biến hệ thống `%PATH%` của bạn. Nếu tất cả đều đúng và Rust vẫn không hoạt động,
+có một số nơi bạn có thể nhận trợ giúp. Dễ nhất là kênh #beginners trên [the official Rust Discord][discord]. Ở đó, bạn
+có thể trò chuyện với những người Rustaceans khác (biệt danh ngớ ngẩn mà chúng tôi tự gọi), những người có thể giúp bạn.
+Các nguồn tài nguyên tuyệt vời khác bao gồm [the Users forum][users] và [Stack Overflow][stackoverflow].
 
 [discord]: https://discord.gg/rust-lang
+
 [users]: https://users.rust-lang.org/
+
 [stackoverflow]: https://stackoverflow.com/questions/tagged/rust
 
-### Local Documentation
+### Tài liệu local
 
-The installation of Rust also includes a copy of the documentation locally, so
-you can read it offline. Run `rustup doc` to open the local documentation in
-your browser.
+Quá trình cài đặt Rust cũng bao gồm một bản sao của tài liệu local, vì vậy bạn có thể đọc ngoại tuyến. Chạy `rustup doc`
+để mở tài liệu local trong trình duyệt của bạn.
 
-Any time a type or function is provided by the standard library and you’re not
-sure what it does or how to use it, use the application programming interface
-(API) documentation to find out!
+Bất cứ khi nào một loại hoặc chức năng được cung cấp bởi thư viện chuẩn và bạn không chắc chắn về chức năng hoặc cách sử
+dụng nó, hãy sử dụng tài liệu về giao diện lập trình ứng dụng (API) để tìm hiểu!
