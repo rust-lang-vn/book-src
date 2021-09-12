@@ -80,7 +80,9 @@ Hãy cùng xem xét chi tiết những gì vừa xảy ra trong chương trình 
 đố:
 
 ```rust
-fn main() {}
+fn main() {
+
+}
 ```
 
 Các dòng này xác định một hàm trong Rust. Hàm `main` rất đặc biệt: nó luôn là mã đầu tiên chạy trong mọi chương trình
